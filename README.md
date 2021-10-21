@@ -2,7 +2,7 @@
 permalink: /index.html
 ---
 
-# One-page Site Template with Webpack (with SASS, Babel and PostCSS)
+# One-page Webpack Site Template with SASS, Babel and PostCSS
 
 **Important**: It is assumed that you have `node.js` installed on your computer.
 
