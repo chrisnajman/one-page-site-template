@@ -1,0 +1,21 @@
+@use "../abstracts" as ab;
+
+.header {
+    span {
+        display: block;
+        // text-align: center;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    p {
+        border-bottom: 5px solid ab.$text;
+        padding-bottom: 1rem;
+        @include ab.respond-to(large) {
+            padding-bottom: 2rem;
+            border-bottom: 8px solid ab.$text;
+        }
+    }
+}

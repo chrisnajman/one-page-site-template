@@ -1,0 +1,25 @@
+@use "../abstracts" as ab;
+
+.quote {
+    position: relative;
+    padding-bottom: 3rem;
+    font-size: 110%;
+
+    &::before {
+        content: "“";
+        font-size: 4rem;
+    }
+    &::after {
+        content: "”";
+        font-size: 4rem;
+        position: absolute;
+        right: 0;
+    }
+
+    p {
+        // margin: -2rem auto 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+    }
+}

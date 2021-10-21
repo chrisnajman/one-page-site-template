@@ -1,0 +1,182 @@
+@use "../abstracts" as ab;
+
+:root {
+    --fontSizeBody: 1rem;
+}
+
+@include ab.respond-to(small) {
+    :root {
+        --fontSizeBody: 1.15rem;
+    }
+}
+
+@include ab.respond-to(large) {
+    :root {
+        --fontSizeBody: 1.25rem;
+    }
+}
+*,
+*::before,
+*::after {
+    margin-bottom: 1rem;
+    @include ab.respond-to(x-large) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+*:focus {
+    @include ab.focus;
+}
+
+html {
+    margin-bottom: 0;
+}
+
+body {
+    background-color: ab.$bodybg;
+    color: ab.$text;
+    font-family: ab.$fontText;
+    font-size: var(--fontSizeBody);
+    line-height: 1.5;
+
+    @include ab.respond-to(x-large) {
+        line-height: 1.75rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: ab.$fontSpecial;
+    font-weight: ab.$headerFontWeight;
+    line-height: 1.1;
+}
+
+h1 {
+    // display: flex;
+    // flex-direction: column-reverse;
+    // align-items: center;
+    padding-top: 3rem;
+    font-size: calc(200%);
+
+    @include ab.respond-to(small) {
+        padding-top: 2rem;
+        font-size: calc(250%);
+    }
+    @include ab.respond-to(large) {
+        font-size: calc(300%);
+    }
+}
+
+h2 {
+    padding-top: 1.5rem;
+    @include ab.respond-to(small) {
+        padding-top: 2rem;
+    }
+}
+
+h3 {
+    padding-top: 1.3rem;
+    @include ab.respond-to(small) {
+        padding-top: 1.75rem;
+    }
+}
+
+h4 {
+    padding-top: 1rem;
+    @include ab.respond-to(small) {
+        padding-top: 1.5em;
+    }
+}
+
+dl,
+ul,
+ol,
+p {
+    max-width: 60ch;
+}
+
+img {
+    margin: 0;
+    // @include ab.marginCentre;
+}
+picture {
+    margin-bottom: 0;
+}
+
+/* If width: fit-content/-moz-fit-content not supported everything will align left */
+// @supports ((width: fit-content) or (width: -moz-fit-content)) {
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     ul,
+//     ol,
+//     .glossary,
+//     .quote {
+//         width: -moz-fit-content;
+//         width: fit-content;
+//         @include ab.marginCentre;
+//     }
+//     p {
+//         @include ab.marginCentre;
+//     }
+// }
+
+// p {
+//     @include ab.marginCentre;
+// }
+
+a {
+    font-family: ab.$fontSpecial;
+    text-decoration: none;
+    font-weight: 400;
+    color: ab.$link;
+
+    &.url-text {
+        word-break: break-all;
+    }
+
+    &:hover {
+        color: ab.$linkHover;
+    }
+    &.ref {
+        display: block;
+        padding-top: 1rem;
+        text-align: right;
+        font-weight: 400;
+        border-bottom: 1px dotted ab.$link;
+    }
+}
+
+.container {
+    padding: 0 1rem 1rem 1rem;
+
+    @include ab.respond-to(x-small) {
+        padding: 2rem 0 1rem 1rem;
+    }
+
+    @include ab.respond-to(large) {
+        padding: 0;
+        padding-left: 2rem;
+    }
+}
+
+/* Tab and focus on scrollable regions */
+
+// E.g
+// <div role="region" aria-labelledby="imageLarge" tabindex="0">
+//   <picture id="imageLarge"> ... </picture>
+// </div>
+[role="region"][aria-labelledby][tabindex] {
+    overflow: auto;
+}
+
+// Could be useful for border-bottom
+// .section-level-1 {
+//     @include ab.sectionSeparate;
+//     padding: 2rem 0;
+// }

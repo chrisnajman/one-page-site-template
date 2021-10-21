@@ -1,0 +1,80 @@
+@use "../abstracts" as ab;
+
+.glossary {
+    padding: 0 1rem 2rem 1rem;
+
+    @include ab.respond-to(large) {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+
+    &-title {
+        @include ab.respond-to(large) {
+            @include ab.screenReaderHide;
+        }
+    }
+
+    &-back {
+        display: block;
+        @include ab.respond-to(large) {
+            display: none;
+        }
+    }
+
+    &-links {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &-anchor {
+        display: block;
+        @include ab.button;
+
+        @include ab.respond-to(large) {
+            display: none;
+        }
+    }
+
+    &-button {
+        display: none;
+
+        @include ab.button;
+
+        &:focus {
+            @include ab.focus;
+        }
+
+        .openClose {
+            font-size: 1.5rem;
+        }
+
+        @include ab.respond-to(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    dl {
+        font-size: 1rem;
+    }
+
+    dt {
+        font-weight: ab.$strongFontWeight;
+        font-family: ab.$fontSpecial;
+
+        @include ab.respond-to(large) {
+            margin-bottom: 0;
+        }
+    }
+
+    dd {
+        margin-left: 1rem;
+        @include ab.respond-to(large) {
+            margin-left: 0;
+        }
+    }
+    p {
+        width: auto;
+        font-size: 1rem;
+    }
+}
