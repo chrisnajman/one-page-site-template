@@ -17,7 +17,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Item 3 is taken care of by PostCSS.
 - Item 4, see: 'Publishing to Git Pages from /dist folder', below.
 
-** Folder structure
+## Folder structure
 - All development is done inside `src` folder:
 - - `src/index.html`
 - - `src/js`
