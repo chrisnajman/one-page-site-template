@@ -136,8 +136,9 @@ const slidesContainerMarginBottom = () => {
     }
   })
 }
-
-slidesContainerMarginBottom()
+window.onload = function () {
+  slidesContainerMarginBottom()
+}
 
 export {
   cardsReset,
