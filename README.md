@@ -10,12 +10,12 @@ This repository can be used to build a simple one-page website (i.e not React or
 1. Modern Javascript will work on older browsers,
 2. `.scss` files compile to CSS (usingthe new Dart SASS implementation which allows files to be imported with `@use` and `@forward`, replacing the now deprecated `@import`), and
 3. the compiled CSS will work on older browsers,
-4. You will also be able to easily publish the page to Git Pages.
+4. You will also be able to easily publish the page to Github-pages.
 
 - Item 1 is taken care of by Babel,
 - Item 2 is taken care of by SASS,
 - Item 3 is taken care of by PostCSS.
-- Item 4, see: 'Publishing to Git Pages from /dist folder', below.
+- Item 4, see: 'Publishing to Github-pages from /dist folder', below.
 
 ## Folder structure
 - All development is done inside `src` folder:
@@ -52,7 +52,15 @@ copy and paste the javascript from the subsidiary `.js` files into `index.js`.
 **Important**: `import "../sass/style.scss"` must be at the top of `index.js`.
 
 ## Installation
-In a location on your computer:
+There are two ways of doing this. I prefer the first.
+### 1) Pull down repository
+In a folder on your computer:
+- `git init`
+- `git remote add origin [SSH Url]`
+- `git pull origin master`
+
+### 2) Clone repository
+In a folder on your computer:
 - `git clone git@github.com:chrisnajman/dist-test.git` OR 
 - `git clone git@github.com:chrisnajman/dist-test.git [new name]` (replacing `[new name]` with the folder name of your choice.)
 
@@ -65,7 +73,7 @@ In a location on your computer:
    2. `git commit -m "First commit"`
    3. `git remote add origin [SSH Url]`
    4. `git push origin master`
-5. For Git Pages see "Publishing to Git Pages from /dist folder", below.
+5. For Github-pages see "Publishing to Github-pages from /dist folder", below.
 
 ## npm commands
 Once installed it is advisable to check if all the packages are up to date by running:
@@ -89,6 +97,12 @@ This does three things:
 Once done, any changes made in `src` will automatically update the web browser.
 
 **Note**: the final production files will be in the `dist` folder.
+
+## Publishing to Github-pages from /dist folder
+After running `git push origin master`, run:
+- `git subtree push --prefix dist origin gh-pages`
+
+**Important**: make sure to run e.g. `npm run cbs` before pushing to Github.
 
 ## Credits
 - I got most of the setup done by following these tutorials by **Swashbuckling with Code**:
