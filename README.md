@@ -30,6 +30,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Responsive HTML and images,
 - Slide-in `aside` for e.g a glossary,
 - Carousel,
+- Accordion functionality (allowing for multiple accordions per page),
 - Accessible images (scrollbars at predetermined widths),
 - Accessible tables (scrollbars when content overflows the browser window),
 - CSS `counter-increment` styled lists,
