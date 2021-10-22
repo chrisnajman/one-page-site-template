@@ -136,6 +136,7 @@ $breakpoints: (
     border-style: solid;
     border-color: ab.$text;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 @mixin buttonSlidesHover {
@@ -146,6 +147,7 @@ $breakpoints: (
     }
 }
 
+// Unused
 @mixin sectionSeparate {
     padding: 2em 0;
     border-bottom: 2px dotted ab.$text;

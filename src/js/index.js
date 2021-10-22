@@ -1,4 +1,5 @@
 import "../sass/style.scss"
+import { acccordion } from "./accordion"
 import { reveal, revealbutton } from "./slideout"
 import {
   cardsReset,

@@ -1,0 +1,25 @@
+@use "../abstracts" as ab;
+
+.accordion {
+    &-button {
+        cursor: pointer;
+        color: ab.$link;
+        font-weight: ab.$strongFontWeight;
+        display: block;
+        text-align: right;
+
+        &:hover {
+            color: ab.$linkHover;
+        }
+    }
+
+    &-body {
+        margin-bottom: 0;
+        height: 0;
+        overflow: hidden;
+
+        &.show {
+            height: auto;
+        }
+    }
+}
