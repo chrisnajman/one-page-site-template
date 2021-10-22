@@ -21,6 +21,7 @@
 }
 
 /* Works for firefox */
+// Note: values in @supports (property: value value) are arbitrary colours.
 @supports (scrollbar-color: black grey) {
     * {
         scrollbar-color: ab.$scrollbar-thumb ab.$scrollbar-track;
