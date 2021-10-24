@@ -52,6 +52,9 @@ copy and paste the javascript from the subsidiary `.js` files into `index.js`.
 
 **Important**: `import "../sass/style.scss"` must be at the top of `index.js`.
 
+### JavaScript disabled
+If JavaScript is disabled the site still functions.
+
 ## Installation
 There are two ways of doing this. I prefer the first.
 ### 1) Pull down repository

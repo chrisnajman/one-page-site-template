@@ -1,16 +1,12 @@
 import "../sass/style.scss"
-import { acccordion } from "./accordion"
-import { reveal, revealbutton } from "./slideout"
-import {
-  cardsReset,
-  imageCards,
-  slides,
-  resetCards,
-  slideIndex,
-  plusSlides,
-  showSlides,
-  currentSlide,
-  previousSlide,
-  nextSlide,
-  slidesContainerMarginBottom,
-} from "./carousel"
+window.onload = function () {
+  // Javascript disabled
+  const html = document.querySelector("html")
+  html.classList.remove("no-js")
+
+  // See carousel.js
+  slidesContainerMarginBottom()
+}
+import "./accordion"
+import "./slideout"
+import { slidesContainerMarginBottom } from "./carousel"

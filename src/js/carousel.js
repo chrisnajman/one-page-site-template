@@ -3,21 +3,22 @@
  Reset slides (return to first slide)
 
  */
-const cardsReset = document.querySelector(".cards-reset")
-const imageCards = document.querySelectorAll(".card-image")
+const slidesReset = document.querySelector(".slides-reset")
+// const slides = document.querySelectorAll(".card-image")
+// console.log(slides)
 
 const slides = document.querySelectorAll(".slides")
 
-const resetCards = () => {
-  for (let i = 0; i < imageCards.length; i++) {
-    if (imageCards[i].classList.contains("hide")) {
-      imageCards[i].classList.remove("hide")
+const resetSlides = () => {
+  for (let i = 0; i < slides.length; i++) {
+    if (slides[i].classList.contains("hide")) {
+      slides[i].classList.remove("hide")
     }
   }
 }
 
-cardsReset.addEventListener("click", () => {
-  resetCards()
+slidesReset.addEventListener("click", () => {
+  resetSlides()
   currentSlide(1)
   slidesContainerMarginBottom()
 })
@@ -97,9 +98,9 @@ function showSlides(n) {
 
   // Only show 'Reset' button after slide 2
   if (n > 1) {
-    cardsReset.style.display = "block"
+    slidesReset.style.display = "block"
   } else {
-    cardsReset.style.display = "none"
+    slidesReset.style.display = "none"
   }
 }
 
@@ -112,7 +113,7 @@ function showSlides(n) {
   height of the caption plus 2rem.
 
   Note: the slidesContainerMarginBottom function is called four times:
-  In the global scope, in previousSlide, nextSlide and cardsReset event listeners.
+  In the global scope, in previousSlide, nextSlide and slidesReset event listeners.
 
 */
 const slidesContainerMarginBottom = () => {
@@ -136,15 +137,14 @@ const slidesContainerMarginBottom = () => {
     }
   })
 }
-window.onload = function () {
-  slidesContainerMarginBottom()
-}
+// window.onload = function () {
+//   slidesContainerMarginBottom()
+// }
 
 export {
-  cardsReset,
-  imageCards,
+  slidesReset,
   slides,
-  resetCards,
+  resetSlides,
   slideIndex,
   plusSlides,
   showSlides,
