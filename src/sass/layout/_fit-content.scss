@@ -14,11 +14,9 @@
         width: fit-content;
         @include ab.marginCentre;
     }
-    p {
-        @include ab.marginCentre;
-    }
-
-    img {
+    p,
+    img,
+    .slides-container {
         @include ab.marginCentre;
     }
 
@@ -37,10 +35,9 @@
         }
     }
 
-    .slides {
-        &-container {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
+    // .slides {
+    //     &-container {
+    //         @include ab.marginCentre;
+    //     }
+    // }
 }
