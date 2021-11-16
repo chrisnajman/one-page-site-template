@@ -46,6 +46,9 @@ to use this syntax you could either:
 - put all `.scss` in `style.scss` (avoiding importing altogether) or
 - use the deprecated `@import`. You will get warnings, but the site won't break.
 
+In Dart Sass, `/` for division is deprecated. Use `math.div()`, together with `@use sass:math` instead. See:
+- `sass/components/_testmath.scss` for a usage example.
+
 ### JavaScript
 Two Javascript files are imported into `index.js` using ES6 import modules. If you don't want to use this syntax you can
 copy and paste the javascript from the subsidiary `.js` files into `index.js`.
@@ -53,7 +56,10 @@ copy and paste the javascript from the subsidiary `.js` files into `index.js`.
 **Important**: `import "../sass/style.scss"` must be at the top of `index.js`.
 
 ### JavaScript disabled
-If JavaScript is disabled the site still functions.
+If JavaScript is disabled the site still functions well:
+- all accordion content displays,
+- the slides and captions are stacked,
+- the glossary is visible under the main text.
 
 ## Installation
 There are two ways of doing this. I prefer the first.
