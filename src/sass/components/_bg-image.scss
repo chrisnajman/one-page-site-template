@@ -3,7 +3,7 @@
     width: 50%;
     @include ab.marginCentre;
 
-    padding: 1.5625rem 0;
+    padding: 5rem 0;
     background-image: url("../img/bg-image.png");
-    background-repeat: repeat-x;
+    background-repeat: round space;
 }
