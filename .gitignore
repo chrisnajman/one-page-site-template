@@ -1,5 +1,5 @@
 node_modules
 *.txt
-old
+useful-stuff
 site-build-assets
 COPY-*
