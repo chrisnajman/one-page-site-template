@@ -128,7 +128,7 @@ $breakpoints: (
     }
 }
 
-@mixin buttonSlides {
+@mixin button2 {
     color: ab.$text;
     background-color: ab.$bodybg;
     border-width: 2px;
@@ -138,7 +138,7 @@ $breakpoints: (
     cursor: pointer;
 }
 
-@mixin buttonSlidesHover {
+@mixin button2Hover {
     &:hover {
         background-color: white;
         border-color: #ccc;

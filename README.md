@@ -33,6 +33,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Accordion functionality (allowing for multiple accordions per page),
 - Accessible images (scrollbars at predetermined widths),
 - Accessible tables (scrollbars when content overflows the browser window),
+- Accessible modal pop up which launches on page load,
 - CSS `counter-increment` styled lists,
 - Styled scrollbars (Firefox and Webkit browsers only).
 
@@ -59,7 +60,8 @@ copy and paste the javascript from the subsidiary `.js` files into `index.js`.
 If JavaScript is disabled the site still functions well:
 - all accordion content displays,
 - the slides and captions are stacked,
-- the glossary is visible under the main text.
+- the glossary is visible under the main text,
+- the modal pop up content is displayed at the top of the page.
 
 ## Installation
 There are two ways of doing this. I prefer the first.

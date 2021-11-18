@@ -34,455 +34,505 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Site Template</title>
   </head>
-  <body>
-    <nav class="glossary-links">
-      <button class="glossary-button" data-glossary-button tabindex="0">
-        <span>Glossary</span> <span data-open-close class="openClose">+</span>
-      </button>
-      <a href="#glossary" class="glossary-anchor">Glossary</a>
-    </nav>
-    <div class="container content-wrapper">
-      <main class="main content-main">
-        <article class="article">
-          <header class="header" id="pageTop">
-            <h1>
-              <span>Main Heading</span>
-              <span class="header-image">
-                <picture>
-                  <source srcset="./img/logo.webp" type="image/webp" />
-                  <img src="./img/logo.png" alt="Antibody" />
-                </picture>
-              </span>
-            </h1>
-            <h2>Introduction</h2>
-            <p>
-              Lorem ipsum <a href="#note1"><sup id="ref1">[1]</sup></a> dolor
-              sit amet consectetur adipisicing elit. Repudiandae, alias
-              <a href="#note2"><sup id="ref2">[2]</sup></a
-              >.
-            </p>
-            <ol>
-              <li>
-                Lorem <a href="#note3"><sup id="ref3">[3]</sup></a> ipsum dolor
-                sit.
-              </li>
-              <li>
-                Lorem, ipsum
-                <a href="#note4"><sup id="ref4">[4]</sup></a> dolor, and
-              </li>
-              <li>
-                Lorem ipsum dolor <a href="#note5"><sup id="ref5">[5]</sup></a>
-                sit amet.
-              </li>
-            </ol>
-          </header>
-          <section class="section-level-1">
-            <h2>CSS Background Image</h2>
-            <div class="bg-image"></div>
-          </section>
+  <body id="pageStart">
+    <div id="overlay" class="modal-overlay">
+      <div id="modal" class="modal">
+        <div
+          class="modal-content"
+          aria-hidden="false"
+          aria-describedby="modalDescription"
+          role="dialog"
+        >
+          <p class="screenreader-hide" id="modalDescription">
+            This is a dialog window which overlays the main content of the page.
+            The modal begins with a heading 2 called "Disclaimer". Pressing the
+            "Close modal" link at the bottom of the modal will close the modal
+            and return you to the top of the page.
+          </p>
+          <h2>Disclaimer</h2>
+          <p>
+            I am neither a biologist nor a virologist or physician. Everything
+            on this page reflects my, sometimes limited, understanding of the
+            articles and videos I have read and watched during my research.
+          </p>
+          <a
+            href="#pageStart"
+            id="close-modal-btn"
+            class="close-modal-btn"
+            tabindex="0"
+          >
+            <span>Close modal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="main" role="main" aria-hidden="false">
+      <div class="content-wrapper">
+        <nav class="glossary-links">
+          <button class="glossary-button" data-glossary-button tabindex="0">
+            <span>Glossary</span>
+            <span data-open-close class="openClose">+</span>
+          </button>
+          <a href="#glossary" class="glossary-anchor">Glossary</a>
+        </nav>
+        <main class="main content-main">
+          <article class="article">
+            <header class="header" id="pageTop">
+              <h1>
+                <span>Main Heading</span>
+                <span class="header-image">
+                  <picture>
+                    <source srcset="./img/logo.webp" type="image/webp" />
+                    <img src="./img/logo.png" alt="Antibody" />
+                  </picture>
+                </span>
+              </h1>
+              <h2>Introduction</h2>
+              <p>
+                Lorem ipsum <a href="#note1"><sup id="ref1">[1]</sup></a> dolor
+                sit amet consectetur adipisicing elit. Repudiandae, alias
+                <a href="#note2"><sup id="ref2">[2]</sup></a
+                >.
+              </p>
+              <ol>
+                <li>
+                  Lorem <a href="#note3"><sup id="ref3">[3]</sup></a> ipsum
+                  dolor sit.
+                </li>
+                <li>
+                  Lorem, ipsum
+                  <a href="#note4"><sup id="ref4">[4]</sup></a> dolor, and
+                </li>
+                <li>
+                  Lorem ipsum dolor
+                  <a href="#note5"><sup id="ref5">[5]</sup></a>
+                  sit amet.
+                </li>
+              </ol>
+            </header>
+            <section class="section-level-1">
+              <h2>CSS Background Image</h2>
+              <div class="bg-image"></div>
+            </section>
 
-          <section class="section-level-1">
-            <h2>Carousel</h2>
-            <div class="slides-container">
-              <div class="slides-info">
-                <span class="slide-number"></span>/<span
-                  class="slide-total"
-                ></span>
-              </div>
-              <div class="slides slides-fade">
-                <picture>
-                  <source srcset="./img/slide-1.webp" type="image/webp" />
-                  <img src="./img/slide-1.png" alt="Slide 1" />
-                </picture>
-
-                <div class="slides-caption" id="caption-1">
-                  <p>
-                    <strong>Slide 1: Captions can be of varying length.</strong>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit,
-                    ipsum dolor, sit amet consectetur adipisicing elit. Sed unde
-                    facere obcaecati perspiciatis provident tempora. Sed unde
-                    facere obcaecati perspiciatis provident tempora. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Corrupti,
-                    accusantium nemo velit cumque magnam molestias dicta est
-                    illum hic ea libero aliquid consectetur dolor asperiores
-                    possimus enim blanditiis saepe, minus nisi cupiditate. Sunt
-                    beatae architecto cum itaque, tempora eligendi eveniet
-                    ducimus dolor, ipsa excepturi dicta repellendus eius eum
-                    molestiae ut.
-                  </p>
+            <section class="section-level-1">
+              <h2>Carousel</h2>
+              <div class="slides-container">
+                <div class="slides-info">
+                  <span class="slide-number"></span>/<span
+                    class="slide-total"
+                  ></span>
                 </div>
-              </div>
+                <div class="slides slides-fade">
+                  <picture>
+                    <source srcset="./img/slide-1.webp" type="image/webp" />
+                    <img src="./img/slide-1.png" alt="Slide 1" />
+                  </picture>
 
-              <div class="slides slides-fade">
-                <picture>
-                  <source srcset="./img/slide-2.webp" type="image/webp" />
-                  <img src="./img/slide-2.png" alt="Slide 2" />
-                </picture>
-
-                <div class="slides-caption" id="caption-2">
-                  <p>
-                    Slide 2: Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Sed unde facere obcaecati perspiciatis provident
-                    tempora
-                  </p>
+                  <div class="slides-caption" id="caption-1">
+                    <p>
+                      <strong
+                        >Slide 1: Captions can be of varying length.</strong
+                      >
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit,
+                      ipsum dolor, sit amet consectetur adipisicing elit. Sed
+                      unde facere obcaecati perspiciatis provident tempora. Sed
+                      unde facere obcaecati perspiciatis provident tempora.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, accusantium nemo velit cumque magnam molestias
+                      dicta est illum hic ea libero aliquid consectetur dolor
+                      asperiores possimus enim blanditiis saepe, minus nisi
+                      cupiditate. Sunt beatae architecto cum itaque, tempora
+                      eligendi eveniet ducimus dolor, ipsa excepturi dicta
+                      repellendus eius eum molestiae ut.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="slides slides-fade">
-                <picture>
-                  <source srcset="./img/slide-3.webp" type="image/webp" />
-                  <img src="./img/slide-3.png" alt="Slide 3" />
-                </picture>
+                <div class="slides slides-fade">
+                  <picture>
+                    <source srcset="./img/slide-2.webp" type="image/webp" />
+                    <img src="./img/slide-2.png" alt="Slide 2" />
+                  </picture>
 
-                <div class="slides-caption" id="caption-3">
-                  <p>Slide 3: Lorem ipsum dolor sit amet consectetur.</p>
+                  <div class="slides-caption" id="caption-2">
+                    <p>
+                      Slide 2: Lorem ipsum dolor, sit amet consectetur
+                      adipisicing elit. Sed unde facere obcaecati perspiciatis
+                      provident tempora
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <button class="slides-prev previous">&#10094;</button>
-              <button class="slides-next next">&#10095;</button>
-              <button class="slides-reset">Reset</button>
-            </div>
-          </section>
-          <section class="section-level-1">
-            <h2>Full width image</h2>
-            <p>
-              Image: min-width: 50rem (800px). Scrollbars appear at width:
-              739px. Wrapper div has role/aria-label, and tabindex for focus.
-            </p>
-            <div
-              role="region"
-              aria-labelledby="image1"
-              tabindex="0"
-              class="image-scroll"
-            >
-              <picture id="image1">
-                <source srcset="./img/full-width.webp" type="image/webp" />
-                <img
-                  src="./img/full-width.png"
-                  alt="Full width image"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-          </section>
-          <section class="section-level-1">
-            <h2>Square(ish) Diagram</h2>
-            <p>
-              Image: min-width: 50rem (800px). Scrollbars appear at width:
-              739px.
-            </p>
-            <div class="image-info">
+                <div class="slides slides-fade">
+                  <picture>
+                    <source srcset="./img/slide-3.webp" type="image/webp" />
+                    <img src="./img/slide-3.png" alt="Slide 3" />
+                  </picture>
+
+                  <div class="slides-caption" id="caption-3">
+                    <p>Slide 3: Lorem ipsum dolor sit amet consectetur.</p>
+                  </div>
+                </div>
+
+                <button class="slides-prev previous">&#10094;</button>
+                <button class="slides-next next">&#10095;</button>
+                <button class="slides-reset">Reset</button>
+              </div>
+            </section>
+            <section class="section-level-1">
+              <h2>Full width image</h2>
+              <p>
+                Image: min-width: 50rem (800px). Scrollbars appear at width:
+                739px. Wrapper div has role/aria-label, and tabindex for focus.
+              </p>
               <div
                 role="region"
-                aria-labelledby="image2"
+                aria-labelledby="image1"
                 tabindex="0"
-                class="image-info-image image-scroll"
+                class="image-scroll"
               >
-                <picture id="image2">
-                  <source srcset="./img/large.webp" type="image/webp" />
-                  <img src="./img/large.png" alt="Large image" loading="lazy" />
+                <picture id="image1">
+                  <source srcset="./img/full-width.webp" type="image/webp" />
+                  <img
+                    src="./img/full-width.png"
+                    alt="Full width image"
+                    loading="lazy"
+                  />
                 </picture>
               </div>
-              <div class="image-info-info">
-                <ol class="counter-list" role="list">
-                  <li>
-                    Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Reprehenderit in blanditiis quia consectetur suscipit
-                    fugit, veritatis incidunt quos ipsum distinctio.
-                  </li>
-                  <li>
-                    Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Modi, eaque.
-                  </li>
-                  <li>
-                    Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Ut ullam maxime commodi officiis, voluptatum nobis?
-                  </li>
-                  <li>
-                    Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Voluptates accusamus commodi autem deserunt nesciunt.
-                    Numquam quae ab fugiat quaerat, veniam temporibus neque
-                    autem alias nulla atque voluptas! Cupiditate, beatae dicta.
-                  </li>
-                  <li>
-                    Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Quis iusto repellendus repudiandae temporibus,
-                    aspernatur quos nulla. Dolore voluptate autem tempora,
-                    blanditiis sunt voluptas.
-                  </li>
-                  <li>
-                    Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Nostrum optio nesciunt obcaecati quis libero quae
-                    facilis rem.
-                  </li>
-                </ol>
+            </section>
+            <section class="section-level-1">
+              <h2>Square(ish) Diagram</h2>
+              <p>
+                Image: min-width: 50rem (800px). Scrollbars appear at width:
+                739px.
+              </p>
+              <div class="image-info">
+                <div
+                  role="region"
+                  aria-labelledby="image2"
+                  tabindex="0"
+                  class="image-info-image image-scroll"
+                >
+                  <picture id="image2">
+                    <source srcset="./img/large.webp" type="image/webp" />
+                    <img
+                      src="./img/large.png"
+                      alt="Large image"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="image-info-info">
+                  <ol class="counter-list" role="list">
+                    <li>
+                      Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Reprehenderit in blanditiis quia consectetur
+                      suscipit fugit, veritatis incidunt quos ipsum distinctio.
+                    </li>
+                    <li>
+                      Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Modi, eaque.
+                    </li>
+                    <li>
+                      Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Ut ullam maxime commodi officiis, voluptatum nobis?
+                    </li>
+                    <li>
+                      Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Voluptates accusamus commodi autem deserunt
+                      nesciunt. Numquam quae ab fugiat quaerat, veniam
+                      temporibus neque autem alias nulla atque voluptas!
+                      Cupiditate, beatae dicta.
+                    </li>
+                    <li>
+                      Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Quis iusto repellendus repudiandae temporibus,
+                      aspernatur quos nulla. Dolore voluptate autem tempora,
+                      blanditiis sunt voluptas.
+                    </li>
+                    <li>
+                      Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nostrum optio nesciunt obcaecati quis libero quae
+                      facilis rem.
+                    </li>
+                  </ol>
+                </div>
               </div>
-            </div>
-          </section>
-          <section class="section-level-1">
-            <h2>Square(ish) Diagram (Reversed)</h2>
-            <p>
-              Image: min-width: 50rem (800px). Scrollbars appear at width:
-              739px.
-            </p>
-            <div
-              role="region"
-              aria-labelledby="image3"
-              tabindex="0"
-              class="image-info image-info-reverse"
-            >
-              <div class="image-info-image image-scroll">
-                <picture id="image3">
-                  <source srcset="./img/large.webp" type="image/webp" />
-                  <img src="./img/large.png" alt="Large image" loading="lazy" />
-                </picture>
-              </div>
-              <div class="image-info-info">
-                <ol class="counter-list" role="list">
-                  <li>
-                    Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Reprehenderit in blanditiis quia consectetur suscipit
-                    fugit, veritatis incidunt quos ipsum distinctio.
-                  </li>
-                  <li>
-                    Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Modi, eaque.
-                  </li>
-                  <li>
-                    Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Ut ullam maxime commodi officiis, voluptatum nobis?
-                  </li>
-                  <li>
-                    Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Voluptates accusamus commodi autem deserunt nesciunt.
-                    Numquam quae ab fugiat quaerat, veniam temporibus neque
-                    autem alias nulla atque voluptas! Cupiditate, beatae dicta.
-                  </li>
-                  <li>
-                    Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Quis iusto repellendus repudiandae temporibus,
-                    aspernatur quos nulla. Dolore voluptate autem tempora,
-                    blanditiis sunt voluptas.
-                  </li>
-                  <li>
-                    Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Nostrum optio nesciunt obcaecati quis libero quae
-                    facilis rem.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </section>
-          <section class="section-level-1">
-            <h2>Square(ish) Diagram</h2>
-            <p>
-              Image: min-width: 50rem (800px). Scrollbars appear at width:
-              739px.
-            </p>
-            <div class="image-info">
+            </section>
+            <section class="section-level-1">
+              <h2>Square(ish) Diagram (Reversed)</h2>
+              <p>
+                Image: min-width: 50rem (800px). Scrollbars appear at width:
+                739px.
+              </p>
               <div
                 role="region"
                 aria-labelledby="image3"
                 tabindex="0"
-                class="image-info-image image-scroll"
+                class="image-info image-info-reverse"
               >
-                <picture id="image3">
-                  <source srcset="./img/large.webp" type="image/webp" />
-                  <img src="./img/large.png" alt="Large image" loading="lazy" />
-                </picture>
+                <div class="image-info-image image-scroll">
+                  <picture id="image3">
+                    <source srcset="./img/large.webp" type="image/webp" />
+                    <img
+                      src="./img/large.png"
+                      alt="Large image"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="image-info-info">
+                  <ol class="counter-list" role="list">
+                    <li>
+                      Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Reprehenderit in blanditiis quia consectetur
+                      suscipit fugit, veritatis incidunt quos ipsum distinctio.
+                    </li>
+                    <li>
+                      Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Modi, eaque.
+                    </li>
+                    <li>
+                      Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Ut ullam maxime commodi officiis, voluptatum nobis?
+                    </li>
+                    <li>
+                      Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Voluptates accusamus commodi autem deserunt
+                      nesciunt. Numquam quae ab fugiat quaerat, veniam
+                      temporibus neque autem alias nulla atque voluptas!
+                      Cupiditate, beatae dicta.
+                    </li>
+                    <li>
+                      Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Quis iusto repellendus repudiandae temporibus,
+                      aspernatur quos nulla. Dolore voluptate autem tempora,
+                      blanditiis sunt voluptas.
+                    </li>
+                    <li>
+                      Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nostrum optio nesciunt obcaecati quis libero quae
+                      facilis rem.
+                    </li>
+                  </ol>
+                </div>
               </div>
-              <div class="image-info-info">
-                <ol class="counter-list" role="list">
-                  <li>
-                    Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Reprehenderit in blanditiis quia consectetur suscipit
-                    fugit, veritatis incidunt quos ipsum distinctio.
-                  </li>
-                  <li>
-                    Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Modi, eaque.
-                  </li>
-                  <li>
-                    Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Ut ullam maxime commodi officiis, voluptatum nobis?
-                  </li>
-                  <li>
-                    Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Voluptates accusamus commodi autem deserunt nesciunt.
-                    Numquam quae ab fugiat quaerat, veniam temporibus neque
-                    autem alias nulla atque voluptas! Cupiditate, beatae dicta.
-                  </li>
-                  <li>
-                    Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Quis iusto repellendus repudiandae temporibus,
-                    aspernatur quos nulla. Dolore voluptate autem tempora,
-                    blanditiis sunt voluptas.
-                  </li>
-                  <li>
-                    Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Nostrum optio nesciunt obcaecati quis libero quae
-                    facilis rem.
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </section>
-          <section class="section-level-1">
-            <h2>Text Block</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-              dolore molestiae eos neque necessitatibus expedita? Fuga quos
-              maxime ipsum nihil!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              aperiam at totam quae incidunt eaque earum porro eos quos
-              distinctio reiciendis autem, suscipit alias. Iusto.
-            </p>
-            <h3>Heading 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugit
-              maiores libero minus dolorum neque!
-            </p>
-            <h4>Heading 4</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
-              eligendi dolorem? Molestias?
-            </p>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <blockquote class="quote">
+            </section>
+            <section class="section-level-1">
+              <h2>Square(ish) Diagram</h2>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-                animi alias eaque exercitationem inventore eum magnam voluptas
-                est ducimus, doloribus dolore non, dolorem eveniet fugiat
-                placeat officiis tenetur quis numquam aperiam quo accusamus.
-                Ullam sit suscipit reprehenderit ipsa, magnam assumenda totam
-                quasi hic cupiditate eos, nostrum, tempora omnis libero
-                voluptatem.
+                Image: min-width: 50rem (800px). Scrollbars appear at width:
+                739px.
               </p>
-              <p class="quote-source">
-                Source:
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >[Name of source]</a
+              <div class="image-info">
+                <div
+                  role="region"
+                  aria-labelledby="image3"
+                  tabindex="0"
+                  class="image-info-image image-scroll"
                 >
-              </p>
-            </blockquote>
-          </section>
-          <section class="section-level-1">
-            <h2>Accessible Table</h2>
-            <p>
-              Scrollbars when browser window is too narrow. Wrapper div has
-              role/aria-label, and tabindex for focus.
-            </p>
-            <div role="region" aria-labelledby="caption01" tabindex="0">
-              <table>
-                <caption id="caption01">
-                  Caption
-                </caption>
-                <tr>
-                  <td></td>
-                  <th scope="col">Lorempsumdolor.</th>
-                  <th scope="col">Lorem, ipsum.</th>
-                  <th scope="col">Lorem</th>
-                  <th scope="col">Lorem ipsum dolor sit.</th>
-                </tr>
-                <tr>
-                  <th scope="row">Lorem ipsum dolor sit amet.</th>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus, earum!
-                  </td>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td>Lorem, ipsum dolor.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lorem ipsum dolor sit amet.</th>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus, earum!
-                  </td>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td>Lorem, ipsum dolor.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Lorem ipsum dolor sit amet.</th>
-                  <td>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus, earum!
-                  </td>
-                  <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td>Lorem, ipsum dolor.</td>
-                </tr>
-              </table>
-            </div>
-          </section>
-          <section class="accordion-wrapper" data-accordion-wrapper>
-            <h2>Accordion</h2>
-            <p>
-              Any of the elements on this page can be nested inside the
-              accordion. Repellat placeat ut, nostrum cupiditate est, fuga
-              quaerat architecto esse, consequuntur harum dolore. Rem a amet
-              dicta nemo consectetur ipsum distinctio dolorem!
-              <span class="accordion-button" data-accordion-button>
-                [show more ...]
-              </span>
-            </p>
-            <div class="accordion-body" data-accordion-body>
-              <h3>Accordion Content</h3>
+                  <picture id="image3">
+                    <source srcset="./img/large.webp" type="image/webp" />
+                    <img
+                      src="./img/large.png"
+                      alt="Large image"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="image-info-info">
+                  <ol class="counter-list" role="list">
+                    <li>
+                      Item 1 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Reprehenderit in blanditiis quia consectetur
+                      suscipit fugit, veritatis incidunt quos ipsum distinctio.
+                    </li>
+                    <li>
+                      Item 2 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Modi, eaque.
+                    </li>
+                    <li>
+                      Item 3 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Ut ullam maxime commodi officiis, voluptatum nobis?
+                    </li>
+                    <li>
+                      Item 4 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Voluptates accusamus commodi autem deserunt
+                      nesciunt. Numquam quae ab fugiat quaerat, veniam
+                      temporibus neque autem alias nulla atque voluptas!
+                      Cupiditate, beatae dicta.
+                    </li>
+                    <li>
+                      Item 5 Lorem ipsum dolor sit amet consectetur, adipisicing
+                      elit. Quis iusto repellendus repudiandae temporibus,
+                      aspernatur quos nulla. Dolore voluptate autem tempora,
+                      blanditiis sunt voluptas.
+                    </li>
+                    <li>
+                      Item 6 Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nostrum optio nesciunt obcaecati quis libero quae
+                      facilis rem.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <section class="section-level-1">
+              <h2>Text Block</h2>
               <p>
-                You can have multiple accordions on the same page. Maxime
-                facilis ad unde iste aperiam, perferendis, minus quidem quisquam
-                dignissimos id dolorem. Est delectus reprehenderit illo dolorem
-                quam!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+                dolore molestiae eos neque necessitatibus expedita? Fuga quos
+                maxime ipsum nihil!
               </p>
               <p>
-                Nemo velit magni modi consectetur, commodi debitis cupiditate
-                asperiores, ut iure nesciunt illum, quisquam ea nam iste ex.
-                Unde quod ipsam numquam ad debitis, eum provident quis natus
-                autem assumenda?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                aperiam at totam quae incidunt eaque earum porro eos quos
+                distinctio reiciendis autem, suscipit alias. Iusto.
               </p>
+              <h3>Heading 3</h3>
               <p>
-                Est neque quaerat atque nisi incidunt repudiandae, illum
-                sapiente? Sapiente maiores cum ullam dolorum consequatur.
-                Doloribus vero magnam odit quas adipisci velit amet ab, maiores
-                delectus corrupti, quam praesentium? Excepturi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                fugit maiores libero minus dolorum neque!
               </p>
+              <h4>Heading 4</h4>
               <p>
-                Nulla minima dolorem dolorum itaque voluptatum enim, numquam
-                repellat eum aliquid? Vitae explicabo asperiores adipisci
-                inventore odio sed doloribus? Voluptatibus vitae, consectetur ab
-                blanditiis rem alias tempore ut! Repudiandae, tempora.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
+                eligendi dolorem? Molestias?
               </p>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <blockquote class="quote">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                  animi alias eaque exercitationem inventore eum magnam voluptas
+                  est ducimus, doloribus dolore non, dolorem eveniet fugiat
+                  placeat officiis tenetur quis numquam aperiam quo accusamus.
+                  Ullam sit suscipit reprehenderit ipsa, magnam assumenda totam
+                  quasi hic cupiditate eos, nostrum, tempora omnis libero
+                  voluptatem.
+                </p>
+                <p class="quote-source">
+                  Source:
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    >[Name of source]</a
+                  >
+                </p>
+              </blockquote>
+            </section>
+            <section class="section-level-1">
+              <h2>Accessible Table</h2>
               <p>
-                Repellendus voluptatum necessitatibus exercitationem doloremque!
-                Eveniet tempore soluta itaque consequatur excepturi laborum
-                officiis fugit corporis harum voluptates consequuntur vitae,
-                vero praesentium quam doloribus nulla odio dolore reprehenderit
-                nisi necessitatibus modi!
+                Scrollbars when browser window is too narrow. Wrapper div has
+                role/aria-label, and tabindex for focus.
               </p>
-            </div>
-          </section>
-        </article>
-      </main>
-      <aside class="content-aside">
-        <h2 id="glossary" class="glossary-title">Glossary</h2>
-        <div class="glossary">
-          <p>Terms not described in the main text are listed here.</p>
-          <dl class="glossary-items">
-            <dt>Term</dt>
-            <dd>Description</dd>
-          </dl>
-          <span class="glossary-back"
-            ><a href="#pageTop" class="ref">Back to top &#8593;</a></span
-          >
-        </div>
-      </aside>
-    </div>
-    <div class="container">
+              <div role="region" aria-labelledby="caption01" tabindex="0">
+                <table>
+                  <caption id="caption01">
+                    Caption
+                  </caption>
+                  <tr>
+                    <td></td>
+                    <th scope="col">Lorempsumdolor.</th>
+                    <th scope="col">Lorem, ipsum.</th>
+                    <th scope="col">Lorem</th>
+                    <th scope="col">Lorem ipsum dolor sit.</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lorem ipsum dolor sit amet.</th>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus, earum!
+                    </td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem, ipsum dolor.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lorem ipsum dolor sit amet.</th>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus, earum!
+                    </td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem, ipsum dolor.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Lorem ipsum dolor sit amet.</th>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus, earum!
+                    </td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Lorem, ipsum dolor.</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+            <section class="accordion-wrapper" data-accordion-wrapper>
+              <h2>Accordion</h2>
+              <p>
+                Any of the elements on this page can be nested inside the
+                accordion. Repellat placeat ut, nostrum cupiditate est, fuga
+                quaerat architecto esse, consequuntur harum dolore. Rem a amet
+                dicta nemo consectetur ipsum distinctio dolorem!
+                <span class="accordion-button" data-accordion-button>
+                  [show more ...]
+                </span>
+              </p>
+              <div class="accordion-body" data-accordion-body>
+                <h3>Accordion Content</h3>
+                <p>
+                  You can have multiple accordions on the same page. Maxime
+                  facilis ad unde iste aperiam, perferendis, minus quidem
+                  quisquam dignissimos id dolorem. Est delectus reprehenderit
+                  illo dolorem quam!
+                </p>
+                <p>
+                  Nemo velit magni modi consectetur, commodi debitis cupiditate
+                  asperiores, ut iure nesciunt illum, quisquam ea nam iste ex.
+                  Unde quod ipsam numquam ad debitis, eum provident quis natus
+                  autem assumenda?
+                </p>
+                <p>
+                  Est neque quaerat atque nisi incidunt repudiandae, illum
+                  sapiente? Sapiente maiores cum ullam dolorum consequatur.
+                  Doloribus vero magnam odit quas adipisci velit amet ab,
+                  maiores delectus corrupti, quam praesentium? Excepturi.
+                </p>
+                <p>
+                  Nulla minima dolorem dolorum itaque voluptatum enim, numquam
+                  repellat eum aliquid? Vitae explicabo asperiores adipisci
+                  inventore odio sed doloribus? Voluptatibus vitae, consectetur
+                  ab blanditiis rem alias tempore ut! Repudiandae, tempora.
+                </p>
+                <p>
+                  Repellendus voluptatum necessitatibus exercitationem
+                  doloremque! Eveniet tempore soluta itaque consequatur
+                  excepturi laborum officiis fugit corporis harum voluptates
+                  consequuntur vitae, vero praesentium quam doloribus nulla odio
+                  dolore reprehenderit nisi necessitatibus modi!
+                </p>
+              </div>
+            </section>
+          </article>
+        </main>
+        <aside class="content-aside">
+          <h2 id="glossary" class="glossary-title">Glossary</h2>
+          <div class="glossary">
+            <p>Terms not described in the main text are listed here.</p>
+            <dl class="glossary-items">
+              <dt>Term</dt>
+              <dd>Description</dd>
+            </dl>
+            <span class="glossary-back"
+              ><a href="#pageTop" class="ref">Back to top &#8593;</a></span
+            >
+          </div>
+        </aside>
+      </div>
       <footer class="page-footer">
         <section>
           <h2>References</h2>

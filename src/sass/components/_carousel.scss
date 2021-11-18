@@ -18,7 +18,7 @@
 
     &-container {
         position: relative;
-		
+
         max-width: 54.25rem;
 
         @include ab.respond-to(large) {
@@ -83,7 +83,7 @@
         font-size: 0.6875rem;
         transition: 0.6s ease;
         user-select: none;
-        @include ab.buttonSlides;
+        @include ab.button2;
 
         @include ab.respond-to(small) {
             font-size: 1.125rem;
@@ -92,7 +92,7 @@
 
     &-prev:hover,
     &-next:hover {
-        @include ab.buttonSlidesHover;
+        @include ab.button2Hover;
     }
 
     &-prev {
@@ -138,14 +138,14 @@
         font-family: ab.$fontSpecial;
         padding: 0.5rem;
 
-        @include ab.buttonSlides;
+        @include ab.button2;
 
         cursor: pointer;
 
         transition: 0.6s ease;
 
         &:hover {
-            @include ab.buttonSlidesHover;
+            @include ab.button2Hover;
         }
     }
 }

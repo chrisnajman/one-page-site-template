@@ -9,5 +9,8 @@
 @forward "../components/carousel";
 @forward "../components/bg-image";
 @forward "../components/accordion";
-@forward "../components/no-js";
+@forward "../components/modal";
 // @forward "../components/testmath";
+
+/* no-js should always come last */
+@forward "../components/no-js";

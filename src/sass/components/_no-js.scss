@@ -69,4 +69,20 @@
             background: ab.$bodybg !important;
         }
     }
+
+    .modal {
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        border-radius: 0em !important;
+        border: none !important;
+
+        &-overlay {
+            display: block !important;
+            position: static !important;
+            background-color: transparent !important;
+            height: auto !important;
+            width: auto !important;
+        }
+    }
 }

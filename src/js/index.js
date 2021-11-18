@@ -7,6 +7,8 @@ window.onload = function () {
   // See carousel.js
   slidesContainerMarginBottom()
 }
+
 import "./accordion"
+import "./modal"
 import "./slideout"
 import { slidesContainerMarginBottom } from "./carousel"
