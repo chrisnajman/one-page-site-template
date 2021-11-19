@@ -1,12 +1,19 @@
 @use "../abstracts" as ab;
 
-.modal-content {
-    position: relative;
-    padding: 2rem;
-    min-width: 15rem;
+.modal {
+    &-content {
+        position: relative;
+        padding: 2rem;
+        min-width: 15rem;
 
-    @include ab.respond-to(xx-small) {
-        padding: 2rem 0.5rem 0.5rem 1rem;
+        @include ab.respond-to(xx-small) {
+            padding: 2rem 0.5rem 0.5rem 1rem;
+        }
+    }
+
+    &-faux-heading {
+        max-width: 100%;
+        text-align: center;
     }
 }
 
