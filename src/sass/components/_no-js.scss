@@ -70,6 +70,15 @@
         }
     }
 
+    /* Modal */
+    .modal-launch-button {
+        display: none !important;
+    }
+
+    .hidden {
+        display: block !important;
+    }
+
     .modal {
         display: block !important;
         position: static !important;

@@ -33,8 +33,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Accordion functionality (allowing for multiple accordions per page),
 - Accessible images (scrollbars at predetermined widths),
 - Accessible tables (scrollbars when content overflows the browser window),
-- Accessible modal pop up which launches on page load,
-- CSS `counter-increment` styled lists,
+- Accessible modal pop up (launched from 'Disclaimer' button),
 - Styled scrollbars (Firefox and Webkit browsers only).
 
 **Note**: for Sass path to background images see `src/sass/components/_bg-image.scss`.
@@ -61,7 +60,7 @@ If JavaScript is disabled the site still functions well:
 - all accordion content displays,
 - the slides and captions are stacked,
 - the glossary is visible under the main text,
-- the modal pop up content is displayed at the top of the page.
+- the modal pop up content is displayed under the main heading (h1).
 
 ## Installation
 There are two ways of doing this. I prefer the first.
@@ -123,5 +122,6 @@ After running `git push origin master`, run:
 -- These are part of a playlist: [Webpack 5](https://www.youtube.com/playlist?list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z)
 - [PNG to WEBP conversion] (https://onlineconvertfree.com/complete/png-webp/) 
 - [Favicon generator] (https://realfavicongenerator.net/)
+- [Accessible modal window using ARIA] (https://van11y.net/accessible-modal/)
 
 [Website](https://chrisnajman.github.io/one-page-site-template)

@@ -140,6 +140,7 @@ a {
 
 .container {
     padding: 0 1rem 1rem 1rem;
+    margin: 0;
 
     @include ab.respond-to(x-small) {
         padding: 2rem 0 1rem 1rem;

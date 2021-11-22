@@ -22,16 +22,17 @@ dd {
     margin-top: 0;
 }
 
+abbr[title] {
+    border-bottom: dotted 1px;
+    cursor: help;
+    text-decoration: none;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests 
 default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
     list-style: none;
-}
-
-/* Always have a vertical scroll bar */
-html {
-    overflow-y: scroll;
 }
 
 /* Set core root defaults */
@@ -45,6 +46,9 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     margin: 0;
+
+    /* Always have a vertical scroll bar */
+    overflow-y: scroll;
 }
 
 /* A elements that don't have a class get default styles */

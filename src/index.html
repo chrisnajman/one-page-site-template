@@ -36,18 +36,20 @@
     <title>Site Template</title>
   </head>
   <body role="document">
-    <div class="container" id="page" role="main">
-      <button
-        class="js-modal button"
-        data-modal-prefix-class="simple-animatedtransform"
-        data-modal-content-id="modal_transform_1"
-        data-modal-describedby-id="modal_description"
-        data-modal-close-text="Close modal"
-        data-modal-close-title="Close modal"
-        data-modal-focus-toid="modal_focus_heading"
-      >
-        Disclaimer
-      </button>
+    <div id="page" role="main">
+      <div class="container">
+        <button
+          class="js-modal modal-launch-button"
+          data-modal-prefix-class="simple-animatedtransform"
+          data-modal-content-id="modal_disclaimer"
+          data-modal-describedby-id=""
+          data-modal-close-text="Close"
+          data-modal-close-title="Close"
+          data-modal-focus-toid="modal_focus_heading"
+        >
+          Disclaimer
+        </button>
+      </div>
       <div class="content-wrapper">
         <nav class="glossary-links">
           <button class="glossary-button" data-glossary-button tabindex="0">
@@ -68,6 +70,22 @@
                   </picture>
                 </span>
               </h1>
+
+              <div id="modal_disclaimer" class="hidden">
+                <h2
+                  tabindex="0"
+                  class="modal-focus-heading"
+                  id="modal_focus_heading"
+                >
+                  Disclaimer
+                </h2>
+                <p>
+                  I am neither a biologist nor a physician. This page reflects
+                  my lay understanding of the articles and videos I have read
+                  and watched during my research into the subject. Accordingly,
+                  nothing on this page should be taken as medical advice.
+                </p>
+              </div>
               <h2>Introduction</h2>
               <p>
                 Lorem ipsum <a href="#note1"><sup id="ref1">[1]</sup></a> dolor
@@ -629,6 +647,17 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 >https://realfavicongenerator.net/</a
+              >.
+            </li>
+            <li>
+              Accessible Modal Window with
+              <abbr title="Accessible Rich Internet Applications">ARIA</abbr>:
+              <a
+                class="url-text"
+                href="https://van11y.net/accessible-modal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://van11y.net/accessible-modal/</a
               >.
             </li>
           </ul>
