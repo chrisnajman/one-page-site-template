@@ -120,9 +120,9 @@ After running `git push origin master`, run:
 
 ## Credits
 - I got most of the setup done by following these tutorials by **Swashbuckling with Code**:
--- [Creating and Understanding a Basic Webpack 5 Setup](https://www.youtube.com/watch?v=X1nxTjVDYdQ&list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z&index=1)
--- [Webpack 5 CSS Walkthrough: Sass, PostCSS and more!](https://www.youtube.com/watch?v=X1nxTjVDYdQ&list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z&index=1)
--- These are part of a playlist: [Webpack 5](https://www.youtube.com/playlist?list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z)
+- - [Creating and Understanding a Basic Webpack 5 Setup](https://www.youtube.com/watch?v=X1nxTjVDYdQ&list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z&index=1)
+- - [Webpack 5 CSS Walkthrough: Sass, PostCSS and more!](https://www.youtube.com/watch?v=X1nxTjVDYdQ&list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z&index=1)
+- - - These are part of a playlist: [Webpack 5](https://www.youtube.com/playlist?list=PLmZPx_9ZF_sB4orswXdpThGMX9ii2uP7Z)
 - [PNG to WEBP conversion] (https://onlineconvertfree.com/complete/png-webp/) 
 - [Favicon generator] (https://realfavicongenerator.net/)
 - [Accessible modal window using ARIA] (https://van11y.net/accessible-modal/)
