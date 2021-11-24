@@ -1,8 +1,12 @@
 @use "../abstracts" as ab;
 
 .no-js {
+    .carousel-list-view {
+        display: none !important;
+    }
     .slides {
         display: block !important;
+        padding-bottom: 1.5rem !important;
 
         &-info,
         &-prev,

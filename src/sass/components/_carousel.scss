@@ -167,3 +167,39 @@
         opacity: 1;
     }
 }
+
+/* Disable carousel and show in list view */
+/* disable button */
+.carousel-list-view {
+    @include ab.button;
+    @include ab.marginCentre;
+
+    display: block;
+    margin-bottom: 1.5rem;
+    border-width: 2px;
+    border-radius: 0.5rem;
+
+    &:focus {
+        @include ab.focus;
+    }
+}
+
+/* carousel */
+.slides-container.carousel-disable {
+    margin-bottom: auto !important;
+    .slides {
+        display: block;
+        padding-bottom: 1.5rem;
+
+        &-info,
+        &-prev,
+        &-next,
+        &-reset {
+            display: none !important;
+        }
+
+        &-caption {
+            position: static;
+        }
+    }
+}

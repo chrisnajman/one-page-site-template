@@ -29,8 +29,8 @@ This repository can be used to build a simple one-page website (i.e not React or
 ## Features
 - Responsive HTML and images,
 - Slide-in `aside` for e.g a glossary,
-- Carousel,
-- Accordion functionality (allowing for multiple accordions per page),
+- Carousel, with option to view slides and captions stacked.
+- Accessible accordion,
 - Accessible images (scrollbars at predetermined widths),
 - Accessible tables (scrollbars when content overflows the browser window),
 - Accessible modal pop up (launched from 'Disclaimer' button),
@@ -48,6 +48,9 @@ to use this syntax you could either:
 
 In Dart Sass, `/` for division is deprecated. Use `math.div()`, together with `@use sass:math` instead. See:
 - `sass/components/_testmath.scss` for a usage example.
+
+## Older browsers
+I've used `@supports([selector : "value"])` to shield older browsers from modern CSS.
 
 ### JavaScript
 Two Javascript files are imported into `index.js` using ES6 import modules. If you don't want to use this syntax you can
@@ -123,5 +126,7 @@ After running `git push origin master`, run:
 - [PNG to WEBP conversion] (https://onlineconvertfree.com/complete/png-webp/) 
 - [Favicon generator] (https://realfavicongenerator.net/)
 - [Accessible modal window using ARIA] (https://van11y.net/accessible-modal/)
+- [Accessible accordion by Lyndsey Kopacz] (https://www.a11ywithlindsey.com/blog/javascript-accessibility-accordions)
+- - [My tweaks to the above on Codepen] (https://codepen.io/Naj-codepen/pen/rNzgowb)
 
 [Website](https://chrisnajman.github.io/one-page-site-template)

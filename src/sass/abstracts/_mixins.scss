@@ -70,6 +70,24 @@ $breakpoints: (
 
 // **************************************************** //
 
+@mixin arrowDown($color, $rightleftwidth) {
+    border-top: calc(1.5 * #{$rightleftwidth}) solid $color;
+    border-right: $rightleftwidth solid transparent;
+    border-bottom: none;
+    border-left: $rightleftwidth solid transparent;
+}
+// Usage: @include ab.arrowDown(ab.$sitebluedark, 10px);
+
+@mixin arrowUp($color, $rightleftwidth) {
+    border-top: none;
+    border-right: $rightleftwidth solid transparent;
+    border-bottom: calc(1.5 * #{$rightleftwidth}) solid $color;
+    border-left: $rightleftwidth solid transparent;
+}
+// Usage:  @include ab.arrowUp(ab.$white, 10px);
+
+// **************************************************** //
+
 // Hide but screenreader can see it
 @mixin screenReaderHide {
     // Contain text within 1px box

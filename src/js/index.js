@@ -11,4 +11,4 @@ window.onload = function () {
 import "./accordion"
 import "./modal"
 import "./slideout"
-import { slidesContainerMarginBottom } from "./carousel"
+import slidesContainerMarginBottom from "./carousel"

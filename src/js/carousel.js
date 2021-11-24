@@ -4,8 +4,6 @@
 
  */
 const slidesReset = document.querySelector(".slides-reset")
-// const slides = document.querySelectorAll(".card-image")
-// console.log(slides)
 
 const slides = document.querySelectorAll(".slides")
 
@@ -137,19 +135,17 @@ const slidesContainerMarginBottom = () => {
     }
   })
 }
-// window.onload = function () {
-//   slidesContainerMarginBottom()
-// }
 
-export {
-  slidesReset,
-  slides,
-  resetSlides,
-  slideIndex,
-  plusSlides,
-  showSlides,
-  currentSlide,
-  previousSlide,
-  nextSlide,
-  slidesContainerMarginBottom,
-}
+/* Toggle slideshow to list view */
+const carouselListView = document.querySelector("#carousel-list-view")
+const carousel = carouselListView.nextElementSibling
+
+carouselListView.addEventListener("click", e => {
+  carousel.classList.toggle("carousel-disable")
+  e.target.innerText =
+    e.target.innerText === "Show slides as list"
+      ? "Enable slide show"
+      : "Show slides as list"
+})
+
+export default slidesContainerMarginBottom
