@@ -2,6 +2,8 @@
 permalink: /index.html
 ---
 
+[Website (Git Pages)](https://chrisnajman.github.io/one-page-site-template)
+
 # One-page Webpack Site Template with SASS, Babel and PostCSS
 
 **Important**: It is assumed that you have `node.js` installed on your computer.
@@ -37,8 +39,6 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Styled scrollbars (Firefox and Webkit browsers only).
 
 **Note**: for Sass path to background images see `src/sass/components/_bg-image.scss`.
-
-See [Website](https://chrisnajman.github.io/one-page-site-template) for demo of all features.
 
 ### SASS
 Webpack 5's inbuilt SASS package now supports the `@use` and `@forward` instead of `@import`. However, if you don't want
@@ -127,6 +127,6 @@ After running `git push origin master`, run:
 - [Favicon generator] (https://realfavicongenerator.net/)
 - [Accessible modal window using ARIA] (https://van11y.net/accessible-modal/)
 - [Accessible accordion by Lyndsey Kopacz] (https://www.a11ywithlindsey.com/blog/javascript-accessibility-accordions)
-- - [My tweaks to the above on Codepen] (https://codepen.io/Naj-codepen/pen/rNzgowb)
+- - [My tweaks to the accordion, on Codepen] (https://codepen.io/Naj-codepen/pen/rNzgowb)
 
-[Website](https://chrisnajman.github.io/one-page-site-template)
+[Website (Git Pages)](https://chrisnajman.github.io/one-page-site-template)
