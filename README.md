@@ -49,7 +49,7 @@ to use this syntax you could either:
 In Dart Sass, `/` for division is deprecated. Use `math.div()`, together with `@use sass:math` instead. See:
 - `sass/components/_testmath.scss` for a usage example.
 
-## Older browsers
+### Older browsers
 I've used `@supports([selector : "value"])` to shield older browsers from modern CSS.
 
 ### JavaScript
