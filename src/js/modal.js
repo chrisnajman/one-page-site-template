@@ -1,3 +1,5 @@
+/** BEGIN MODAL */
+
 /* NOTE: the only customisation of this file (by https://github.com/chrisnajman/one-page-site-template) comes on line 205 -  
    I moved ${button_close} to its new position (previously it was before the content div).
  * ES2015 accessible modal window system, using ARIA
@@ -526,3 +528,5 @@
 
   window.van11yAccessibleModalWindowAria = attach
 })(document)
+
+/** END MODAL */
