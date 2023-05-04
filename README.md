@@ -18,6 +18,24 @@ However, the output folder has been changed to `docs` (which makes publishing to
 
 - `path: path.resolve(__dirname, "docs"),`.
 
+Also,   
+
+`
+  devServer: {
+    static: ["./dist"],
+  },
+`  
+  
+has been changed to:
+
+`
+  devServer: {
+    static: ["./docs"],
+  },
+`
+
+## Description
+
 This repository can be used to build a simple one-page website (i.e not React or equivalent). If you use it you can be sure that:
 
 1. Modern Javascript will work on older browsers,
