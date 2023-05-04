@@ -14,7 +14,7 @@ Note that by default, the path to the production folder will be set as `dist`:
 
 - `path: path.resolve(__dirname, "dist"),`.
 
-However, the output folder has been changed to `docs` which makes publishing to Git Pages much simpler:
+However, the output folder has been changed to `docs` (which makes publishing to Git Pages much simpler):
 
 - `path: path.resolve(__dirname, "docs"),`.
 
