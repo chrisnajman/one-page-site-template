@@ -55,6 +55,6 @@ module.exports = {
   target: target,
   devtool: "source-map",
   devServer: {
-    static: ["./dist"],
+    static: ["./docs"],
   },
 }
