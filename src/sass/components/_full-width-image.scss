@@ -1,0 +1,10 @@
+@use "../abstracts" as ab;
+
+@include ab.respond-to(xx-small) {
+    .image-scroll {
+        overflow-x: auto;
+        img {
+            min-width: 50rem;
+        }
+    }
+}

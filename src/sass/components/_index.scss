@@ -1,0 +1,16 @@
+@forward "../components/accessible-table";
+@forward "../components/counter-list";
+@forward "../components/glossary";
+@forward "../components/glossary-js";
+@forward "../components/image-info";
+@forward "../components/scrollbars";
+@forward "../components/full-width-image";
+@forward "../components/quote";
+@forward "../components/carousel";
+@forward "../components/bg-image";
+@forward "../components/accordion";
+@forward "../components/modal";
+// @forward "../components/testmath";
+
+/* no-js should always come last */
+@forward "../components/no-js";

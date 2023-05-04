@@ -1,0 +1,50 @@
+@use "../abstracts" as ab;
+
+.image-info {
+    padding: 1rem 0;
+    border-bottom: 2px solid ab.$text;
+
+    &.no-border {
+        border: 0;
+    }
+
+    @include ab.respond-to(medium) {
+        padding: 2rem 0;
+        display: flex;
+
+        justify-content: space-between;
+
+        ul,
+        ol,
+        p {
+            width: auto;
+            @include ab.marginCentre;
+        }
+    }
+
+    &-image {
+        display: block;
+
+        @include ab.respond-to(medium) {
+            width: 50%;
+        }
+
+        img {
+            border: 1px solid rgb(138, 137, 137);
+            max-width: 100%;
+            @include ab.respond-to(x-small) {
+                max-width: 90%;
+            }
+        }
+    }
+
+    &-info {
+        padding: 1rem 0;
+        @include ab.respond-to(medium) {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            padding: 0 2rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use "../abstracts" as ab;
+
+// Interacts with /src/js/slideout.js
+
+// Containers grow/shrink only at min-width 1280px
+.content {
+    &-wrapper {
+        margin-bottom: 0;
+        @include ab.respond-to(large) {
+            display: flex;
+            overflow: hidden;
+        }
+    }
+    &-aside {
+        margin-bottom: 0;
+        border-top: 2px solid ab.$text;
+        @include ab.respond-to(large) {
+            background: ab.$glossarybg;
+        }
+
+        @include ab.respond-to(large) {
+            @include ab.screenReaderHide;
+            transition: width 1s;
+
+            &-grow {
+                border-left: 2px solid ab.$text;
+                border-top: 0;
+                @include ab.screenReaderShow;
+                width: 30%;
+            }
+        }
+    }
+
+    &-main {
+        margin-bottom: 0;
+
+        width: 100%;
+        transition: width 1s;
+
+        &-shrink {
+            @include ab.respond-to(large) {
+                width: 70%;
+            }
+        }
+    }
+}

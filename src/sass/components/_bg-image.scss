@@ -1,0 +1,9 @@
+@use "../abstracts" as ab;
+.bg-image {
+    width: 50%;
+    @include ab.marginCentre;
+
+    padding: 5rem 0;
+    background-image: url("../img/bg-image.png");
+    background-repeat: round space;
+}

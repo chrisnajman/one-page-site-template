@@ -1,0 +1,13 @@
+@use "../abstracts" as ab;
+
+.article {
+    padding: 0 1rem 2rem 1rem;
+    max-width: 110.25rem;
+    margin-bottom: 0;
+
+    @include ab.marginCentre;
+
+    @include ab.respond-to(large) {
+        padding-bottom: 3rem;
+    }
+}

@@ -1,0 +1,25 @@
+@use "../abstracts" as ab;
+
+.screenreader-hide {
+    @include ab.screenReaderHide;
+}
+
+/* Hide items but still show to screenreaders */
+// Items that have focus (a, button, input) can be hidden, but when they are focused (or active)
+// they will show up. This improves the experience for tab navigation users who will be confused
+// if they tab to something that doesn't print on the web page.
+
+.visually-hidden:not(:focus):not(:active) {
+    /* Contain text within 1px box */
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+    /* Keep the layout */
+    position: absolute;
+    /* Remove any visible trace (e.g. background color) */
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); /* browsers in the future */
+    /* Prevent the screen reader from skipping spaces between words */
+    white-space: nowrap;
+}

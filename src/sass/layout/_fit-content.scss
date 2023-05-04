@@ -1,0 +1,44 @@
+@use "../abstracts" as ab;
+
+/* If width: fit-content/-moz-fit-content not supported everything will align left */
+@supports ((width: fit-content) or (width: -moz-fit-content)) {
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    ol,
+    .glossary,
+    .quote,
+    .accordion {
+        width: -moz-fit-content;
+        width: fit-content;
+        @include ab.marginCentre;
+    }
+    p,
+    img,
+    .slides-container {
+        @include ab.marginCentre;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .container {
+        @include ab.respond-to(x-small) {
+            padding-left: 0;
+        }
+
+        @include ab.respond-to(large) {
+            padding-left: 0;
+        }
+    }
+
+    // .slides {
+    //     &-container {
+    //         @include ab.marginCentre;
+    //     }
+    // }
+}

@@ -1,0 +1,158 @@
+/* I haven't used any mixins or variables in this file as I want it to be standalone */
+
+.modal-launch-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    background-color: white;
+    color: hsl(213, 65%, 30%);
+    border: 2px solid #bfcbd9;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-radius: 0 0 0.5rem 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+    &:focus {
+        outline: 2px dotted hsl(213, 33%, 60%);
+    }
+}
+
+/* --------------- styles for modal -----------------------*/
+
+.hidden {
+    display: none;
+}
+
+/* removes scroll when modal is opened */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* focusable heading inside modal */
+.modal-focus-heading {
+    padding: 2rem 0 0.5rem 0;
+    border-bottom: 2px dotted transparent;
+
+    &:focus {
+        outline: none;
+        border-bottom-color: hsl(213, 33%, 60%);
+    }
+}
+
+/* OVERLAY */
+.simple-animatedtransform-modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 666;
+    cursor: pointer;
+    animation: fadeoverlay ease 0.5s 1 normal;
+
+    &[data-background-click="disabled"] {
+        cursor: auto;
+    }
+}
+
+@keyframes fadeoverlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* MODAL */
+
+/* Dialog element */
+/* needed for old browsers */
+dialog {
+    display: block;
+    border: 0;
+}
+
+/* dialog class */
+.simple-animatedtransform-modal {
+    position: fixed;
+    top: 5%;
+    max-height: 90%;
+
+    border: 1px solid #000;
+    border-radius: 0.25rem;
+    background: #fff;
+    z-index: 667;
+    padding: 1rem 1rem 0 2rem;
+    max-height: 90vh;
+    overflow: auto;
+
+    -webkit-animation: pop ease 0.5s 1 normal;
+    animation: pop ease 0.5s 1 normal;
+}
+
+@supports (transform: translate(-50%, -50%)) {
+    .simple-animatedtransform-modal {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        max-height: none;
+    }
+}
+
+/* dialog animation */
+@keyframes pop {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        max-height: 100%;
+        width: 70%;
+        left: 15%;
+    }
+}
+
+/* Modal content wrapper */
+/* no fallback code required */
+@supports ((display: -webkit-flex) or (display: -moz-flex) or (display: flex)) {
+    .simple-animatedtransform-modal__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* Modal close button */
+.simple-animatedtransform-modal-close {
+    float: right; // For older browsers
+    color: #fff;
+    border: 0;
+    background: #2d77d2;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    border-radius: 1rem;
+    padding: 0 0.5rem 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+@supports ((display: -webkit-flex) or (display: -moz-flex) or (display: flex)) {
+    .simple-animatedtransform-modal-close {
+        align-self: start;
+    }
+}

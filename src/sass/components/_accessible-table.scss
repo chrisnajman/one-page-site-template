@@ -1,0 +1,39 @@
+@use "../abstracts" as ab;
+
+/* Accessible table */
+/* Table wrapper */
+// <div role="region" aria-labelledby="[captionRef]" tabindex="0">
+//             <table>
+//               <caption id="[captionRef]">[Caption]</caption>
+//               ...
+//             </table>
+// </div>
+
+/* Table */
+table {
+    border-spacing: 0;
+    margin-bottom: 1em;
+    border: 1px solid currentColor;
+    @include ab.marginCentre;
+}
+
+caption {
+    font-weight: ab.$strongFontWeight;
+}
+caption,
+th {
+    font-family: ab.$fontSpecial;
+}
+th,
+td {
+    border: 1px solid currentColor;
+    padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: ab.$treven;
+}
+
+tr:nth-child(odd) {
+    background-color: ab.$trodd;
+}

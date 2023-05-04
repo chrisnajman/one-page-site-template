@@ -1,0 +1,205 @@
+@use "../abstracts" as ab;
+
+.slides {
+    display: none;
+
+    &.hide {
+        display: none;
+    }
+
+    &.show {
+        display: block;
+    }
+
+    picture {
+        margin-bottom: 0;
+        border: 2px solid ab.$text;
+    }
+
+    &-container {
+        position: relative;
+
+        max-width: 54.25rem;
+
+        @include ab.respond-to(large) {
+            max-width: 74.25rem;
+        }
+    }
+
+    &-info {
+        color: ab.$text;
+        background-color: ab.$bodybg;
+        font-size: 90%;
+        font-family: ab.$fontSpecial;
+        padding: 0 0.625rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        @include ab.respond-to(small) {
+            top: 30px;
+            right: 30px;
+            padding: 0.5rem 0.75rem;
+        }
+
+        z-index: 30;
+        border: 1px solid ab.$text;
+    }
+
+    &-caption {
+        position: absolute;
+        width: 100%;
+        p {
+            font-family: ab.$fontSpecial;
+            font-size: 90%;
+            padding: 1em 0 0 1em;
+            text-align: center;
+            @supports (width: fit-content) {
+                @include ab.marginCentre;
+                width: fit-content;
+                text-align: left;
+                padding: 1em 0 0 0;
+            }
+        }
+
+        a {
+            font-weight: ab.$strongFontWeight;
+        }
+    }
+
+    &-prev,
+    &-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 0.75rem;
+        @include ab.respond-to(large) {
+            padding: 1rem;
+        }
+        margin-top: -1.375rem;
+
+        font-weight: bold;
+        font-size: 0.6875rem;
+        transition: 0.6s ease;
+        user-select: none;
+        @include ab.button2;
+
+        @include ab.respond-to(small) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &-prev:hover,
+    &-next:hover {
+        @include ab.button2Hover;
+    }
+
+    &-prev {
+        left: -1rem;
+        @include ab.respond-to(large) {
+            left: -1.5rem;
+        }
+    }
+
+    &-next {
+        right: -1rem;
+        @include ab.respond-to(large) {
+            right: -1.5rem;
+        }
+    }
+
+    &-button-disabled,
+    &-button-disabled:hover {
+        display: none;
+    }
+
+    &-fade {
+        -webkit-animation-name: slides-fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: slides-fade;
+        animation-duration: 1.5s;
+    }
+
+    &-reset {
+        position: absolute;
+
+        right: 10px;
+        bottom: 10px;
+
+        @include ab.respond-to(small) {
+            right: 30px;
+            bottom: 30px;
+        }
+
+        z-index: 20;
+
+        font-size: 90%;
+        font-family: ab.$fontSpecial;
+        padding: 0.5rem;
+
+        @include ab.button2;
+
+        cursor: pointer;
+
+        transition: 0.6s ease;
+
+        &:hover {
+            @include ab.button2Hover;
+        }
+    }
+}
+
+@-webkit-keyframes slides-fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slides-fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Disable carousel and show in list view */
+/* disable button */
+.carousel-list-view {
+    @include ab.button;
+    @include ab.marginCentre;
+
+    display: block;
+    margin-bottom: 1.5rem;
+    border-width: 2px;
+    border-radius: 0.5rem;
+
+    &:focus {
+        @include ab.focus;
+    }
+}
+
+/* carousel */
+.slides-container.carousel-disable {
+    margin-bottom: auto !important;
+    .slides {
+        display: block;
+        padding-bottom: 1.5rem;
+
+        &-info,
+        &-prev,
+        &-next,
+        &-reset {
+            display: none !important;
+        }
+
+        &-caption {
+            position: static;
+        }
+    }
+}

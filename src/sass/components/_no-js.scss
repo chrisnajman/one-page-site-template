@@ -1,0 +1,101 @@
+@use "../abstracts" as ab;
+
+.no-js {
+    .carousel-list-view {
+        display: none !important;
+    }
+    .slides {
+        display: block !important;
+        padding-bottom: 1.5rem !important;
+
+        &-info,
+        &-prev,
+        &-next,
+        &-reset {
+            display: none !important;
+        }
+
+        &-caption {
+            position: static !important;
+        }
+    }
+
+    .accordion {
+        &-button {
+            display: none !important;
+        }
+        &-body {
+            height: auto !important;
+        }
+    }
+
+    .glossary {
+        padding: 0 !important;
+
+        p,
+        dl {
+            font-size: inherit !important;
+        }
+
+        &-button {
+            display: none !important;
+        }
+
+        &-anchor {
+            display: block !important;
+        }
+
+        &-title {
+            width: auto !important;
+            height: auto !important;
+            position: static !important;
+            overflow: visible !important;
+            clip: auto !important;
+            clip-path: none !important;
+            white-space: normal !important;
+            text-align: center !important;
+        }
+    }
+
+    .content {
+        &-wrapper {
+            display: block !important;
+        }
+
+        &-aside {
+            width: auto !important;
+            height: auto !important;
+            position: static !important;
+            overflow: visible !important;
+            clip: auto !important;
+            clip-path: none !important;
+            white-space: normal !important;
+            background: ab.$bodybg !important;
+        }
+    }
+
+    /* Modal */
+    .modal-launch-button {
+        display: none !important;
+    }
+
+    .hidden {
+        display: block !important;
+    }
+
+    .modal {
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        border-radius: 0em !important;
+        border: none !important;
+
+        &-overlay {
+            display: block !important;
+            position: static !important;
+            background-color: transparent !important;
+            height: auto !important;
+            width: auto !important;
+        }
+    }
+}

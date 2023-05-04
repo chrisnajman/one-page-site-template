@@ -1,0 +1,84 @@
+@use "../abstracts" as ab;
+
+.accordion {
+    width: 80%;
+    @include ab.marginCentre;
+    border-bottom: 1px solid ab.$black;
+
+    &__button {
+        position: relative;
+        display: block;
+        margin: 0 0 0;
+        border: 1px solid ab.$text;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: left;
+        color: ab.$sitebluedarkest;
+        font-size: 90%;
+        font-weight: ab.$strongFontWeight;
+        font-family: ab.$fontSpecial;
+        background: ab.$white;
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+            background: ab.$sitebluedark;
+            color: ab.$white;
+            &::after {
+                border-top-color: ab.$white;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 1rem;
+            top: 0.65rem;
+            width: 0;
+            height: 0;
+            @include ab.arrowDown(ab.$sitebluedark, 10px);
+        }
+    }
+
+    &__button.expanded {
+        background: ab.$sitebluedarkest;
+        color: ab.$white;
+
+        &::after {
+            @include ab.arrowUp(ab.$white, 10px);
+        }
+    }
+
+    &__section {
+        border-left: 1px solid ab.$text;
+        border-right: 1px solid ab.$text;
+        background: ab.$white;
+        max-height: 0vh;
+        overflow-y: hidden;
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
+
+    &__section.open {
+        max-height: 100vh;
+        transition: max-height 1s;
+        overflow-y: visible;
+        padding-bottom: 1rem;
+    }
+}
+
+.no-js {
+    .accordion {
+        &__button {
+            display: none !important;
+        }
+
+        &__section {
+            border: none !important;
+            background: white !important;
+            max-height: none !important;
+            overflow: visible !important;
+            padding: 0 !important;
+        }
+    }
+}

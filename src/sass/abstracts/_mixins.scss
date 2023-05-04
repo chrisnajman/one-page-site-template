@@ -1,0 +1,178 @@
+@use "../abstracts/variables" as ab;
+
+/* Responsive breakpoint manager */
+$breakpoints: (
+    "xx-small": (
+        max-width: 739px,
+    ),
+    "x-small": (
+        min-width: 740px,
+    ),
+    "small": (
+        min-width: 960px,
+    ),
+    "medium": (
+        min-width: 1024px,
+    ),
+    "large": (
+        min-width: 1280px,
+    ),
+    "x-large": (
+        min-width: 1400px,
+    ),
+);
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+// Usage:
+// @include ab.respond-to(small) {
+//     rules ....
+// }
+
+// **************************************************** //
+
+// Retina Emulator for testing only
+@mixin retinaEmulator($percent, $scale) {
+    zoom: $percent;
+    -moz-transform: scale($scale);
+    -moz-transform-origin: 0 0;
+}
+
+// Usage:
+
+//   E.g. for 2x images, place following in body { ... }:
+//   @include ab.retinaEmulator(200%, 2);
+
+// **************************************************** //
+
+@mixin marginCentre {
+    margin-inline: auto;
+}
+
+// **************************************************** //
+
+@mixin constrain($width, $maxwidth) {
+    width: $width;
+    max-width: $maxwidth;
+}
+
+// **************************************************** //
+
+@mixin arrowDown($color, $rightleftwidth) {
+    border-top: calc(1.5 * #{$rightleftwidth}) solid $color;
+    border-right: $rightleftwidth solid transparent;
+    border-bottom: none;
+    border-left: $rightleftwidth solid transparent;
+}
+// Usage: @include ab.arrowDown(ab.$sitebluedark, 10px);
+
+@mixin arrowUp($color, $rightleftwidth) {
+    border-top: none;
+    border-right: $rightleftwidth solid transparent;
+    border-bottom: calc(1.5 * #{$rightleftwidth}) solid $color;
+    border-left: $rightleftwidth solid transparent;
+}
+// Usage:  @include ab.arrowUp(ab.$white, 10px);
+
+// **************************************************** //
+
+// Hide but screenreader can see it
+@mixin screenReaderHide {
+    // Contain text within 1px box
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+    // Keep the layout */
+    position: absolute;
+    // Remove any visible trace (e.g. background color)
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); // browsers in the future
+    // Prevent the screen reader from skipping spaces between words
+    white-space: nowrap;
+}
+
+// Unhide screenReaderHide so everyone can see it
+@mixin screenReaderShow {
+    clip: auto;
+    clip-path: none;
+    width: auto; // This might cause a problem
+    height: auto;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+}
+
+@mixin focus {
+    outline: 2px dotted ab.$focusHighlight;
+}
+
+// **************************************************** //
+@mixin button {
+    padding: 0.5rem;
+    background-color: white;
+    color: ab.$link;
+    border: 2px solid ab.$glossaryBtnBorder;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-radius: 0 0 0 0.5rem;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: ab.$fontSpecial;
+    font-weight: ab.$strongFontWeight;
+    &:hover {
+        color: ab.$text;
+    }
+    span {
+        margin: 0;
+    }
+
+    .openClose {
+        padding-left: 0.5rem;
+    }
+}
+
+@mixin button2 {
+    color: ab.$text;
+    background-color: ab.$bodybg;
+    border-width: 2px;
+    border-style: solid;
+    border-color: ab.$text;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@mixin button2Hover {
+    &:hover {
+        background-color: white;
+        border-color: #ccc;
+        color: #ccc;
+    }
+}
+
+// Unused
+@mixin sectionSeparate {
+    padding: 2em 0;
+    border-bottom: 2px dotted ab.$text;
+
+    &:first-of-type {
+        border-top: 2px dotted ab.$text;
+    }
+    &:last-of-type {
+        border-bottom: 0;
+    }
+}

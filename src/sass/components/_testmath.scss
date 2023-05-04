@@ -1,0 +1,9 @@
+@use "sass:math";
+
+.testmath {
+    width: calc(math.div(600px, 2)); // 300
+    height: calc(math.div(600px, 5)); // 120
+    background: red;
+}
+
+/* recommended use of math.div() instead of / in Dart Sass */

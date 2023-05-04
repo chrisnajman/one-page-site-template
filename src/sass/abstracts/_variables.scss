@@ -1,0 +1,33 @@
+// Typography
+$fontText: Georgia, "Times New Roman", serif;
+$fontSpecial: "Lato", Arial, Helvetica, sans-serif;
+$strongFontWeight: 600;
+$headerFontWeight: 900;
+
+// Colours
+$white: hsl(0, 0%, 100%);
+$pearl: hsl(210, 75%, 98%);
+$greypale: hsl(213, 25%, 80%);
+$greymid: hsl(213, 33%, 60%);
+$black: hsl(0, 0%, 15%);
+$blacktransp: rgba(0, 0, 0, 0.05);
+$siteblue: hsl(213, 65%, 50%);
+$sitebluedark: hsl(213, 65%, 45%);
+$sitebluedarkest: hsl(213, 65%, 30%);
+
+// Elements - global
+$bodybg: $pearl;
+$text: $black;
+$link: $sitebluedarkest;
+$linkHover: $black;
+$focusHighlight: $greymid;
+$treven: $blacktransp;
+$trodd: $white;
+
+// Elements - specific
+$glossarybg: $white;
+$glossaryBtnBorder: $greypale;
+
+$scrollbar-track: $greypale;
+$scrollbar-thumb: $siteblue;
+$scrollbar-thumb-hover: $greymid;

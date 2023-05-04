@@ -1,0 +1,12 @@
+@use "../abstracts" as ab;
+
+.page-footer {
+    padding-bottom: 2rem;
+    padding: 1rem 0 2rem 0;
+    border-top: 5px solid ab.$text;
+
+    @include ab.respond-to(large) {
+        border-top: 8px solid ab.$text;
+        padding: 1.5rem 0 3rem;
+    }
+}

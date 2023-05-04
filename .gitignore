@@ -1,0 +1,5 @@
+node_modules
+*.txt
+useful-stuff
+site-build-assets
+COPY-*

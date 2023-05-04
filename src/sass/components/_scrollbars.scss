@@ -1,0 +1,29 @@
+@use "../abstracts" as ab;
+
+/* Works for webkit browsers */
+::-webkit-scrollbar {
+    width: auto;
+
+    &-track {
+        background-color: ab.$scrollbar-track;
+        margin: 0.5rem 0;
+    }
+    &-thumb {
+        background-color: ab.$scrollbar-thumb;
+    }
+    &-thumb:hover {
+        background-color: ab.$scrollbar-thumb-hover;
+    }
+    &-track,
+    &-thumb {
+        border-radius: 100vw;
+    }
+}
+
+/* Works for firefox */
+// Note: values in @supports (property: value value) are arbitrary colours.
+@supports (scrollbar-color: black grey) {
+    * {
+        scrollbar-color: ab.$scrollbar-thumb ab.$scrollbar-track;
+    }
+}
