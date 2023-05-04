@@ -10,7 +10,7 @@ permalink: /index.html
 
 ## webpack.config.js
 
-Note that by default, the path to the production folder will be set as `docs`:
+Note that by default, the path to the production folder will be set as `dist`:
 
 - `path: path.resolve(__dirname, "dist"),`.
 
