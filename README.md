@@ -28,7 +28,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - Item 1 is taken care of by Babel,
 - Item 2 is taken care of by SASS,
 - Item 3 is taken care of by PostCSS.
-- Item 4, see: 'Publishing to Git Pages from /dist folder', below.
+- Item 4, see: 'Publishing to Git Pages' and `Publishing to Git Pages from /dist folder', below.
 
 ## Folder structure
 
