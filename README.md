@@ -155,8 +155,9 @@ Once done, any changes made in `src` will automatically update the web browser.
 
 Then, on the GitHub repository page, click on the 'Settings' tab. From the 'Settings' page, click on 'Pages' in the left hand menu.
 
-- xx
-- xx
+- Under 'Branch' select 'main'.
+- Under '/(root)' select '/docs'.
+- Click 'Save'.
 
 ### Publishing to Git Pages from /dist folder
 
