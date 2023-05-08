@@ -6,11 +6,11 @@
   "scripts": {
     "start": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "del-cli --force ./dist",
+    "clean": "del-cli --force ./docs",
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack --watch",
-    "cbs": "del-cli --force ./dist && cross-env NODE_ENV=production webpack && webpack serve",
-    "cbd": "del-cli --force ./dist && webpack --watch"
+    "cbs": "del-cli --force ./docs && cross-env NODE_ENV=production webpack && webpack serve",
+    "cbd": "del-cli --force ./docs && webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +33,7 @@
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
     "webpack": "^5.82.0",
-    "webpack-cli": "^5.0.2",
-    "webpack-dev-server": "^4.13.3"
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0"
   }
 }
