@@ -8,7 +8,9 @@ permalink: /index.html
 
 **Important**: It is assumed that you have `node.js` installed on your computer.
 
-## webpack.config.js
+## webpack.config.js and package.json
+
+### webpack.config.js
 
 Note that by default, the path to the production folder will be set as `dist`:
 
@@ -24,7 +26,7 @@ Also,
   devServer: {
     static: ["./dist"],
   },
-`  
+  
   
 has been changed to:
 
@@ -33,6 +35,9 @@ has been changed to:
     static: ["./docs"],
   },
 `
+### package.json
+
+Similarly, all references in this file to `./dist` have been changed to `./docs`.
 
 ## Description
 
