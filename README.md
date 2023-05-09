@@ -62,7 +62,7 @@ This repository can be used to build a simple one-page website (i.e not React or
 - - `src/img`
 - Production files are generated to `docs` folder.
 - - Output files in `docs` are all on the same level — no folders.
-- - - As noted above, the default output folder name, `docs`, has been changed to `docs`.
+- - - As noted above, the default output folder name, `dist`, has been changed to `docs`.
 
 ## Features
 
