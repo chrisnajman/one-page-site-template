@@ -138,7 +138,7 @@ In a folder on your computer:
    2. `git commit -m "First commit"`
    3. `git remote add origin [SSH Url]`
    4. `git push origin master`
-5. For Git Pages see "Publishing to Git Pages from /dist folder", below.
+5. For Git Pages see "Publishing to Git Pages", below.
 
 ## npm commands
 
