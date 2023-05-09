@@ -111,7 +111,7 @@ If JavaScript is disabled the site still functions well:
 
 ## Installation
 
-### 2) Clone repository
+### Clone repository
 
 In a folder on your computer:
 
