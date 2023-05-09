@@ -111,16 +111,6 @@ If JavaScript is disabled the site still functions well:
 
 ## Installation
 
-There are two ways of doing this. I prefer the first.
-
-### 1) Pull down repository
-
-In a folder on your computer:
-
-- `git init`
-- `git remote add origin [SSH Url]`
-- `git pull origin master`
-
 ### 2) Clone repository
 
 In a folder on your computer:
